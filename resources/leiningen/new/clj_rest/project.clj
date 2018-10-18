@@ -5,7 +5,7 @@
             :dependencies [[org.clojure/clojure "1.9.0"]
                            [compojure "1.6.1"]
                            [ring/ring-defaults "0.3.2"]
-                           [clj-json "0.5.3"]
+                           [ring/ring-json "0.4.0"]
                            [ring/ring-jetty-adapter "1.7.0"]]
             :plugins [[lein-ring "0.12.4"]]
             :ring {:handler {{name}}.handler/app}

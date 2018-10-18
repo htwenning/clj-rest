@@ -2,6 +2,6 @@
   (:require [{{name}}.handler :refer [app]]
             [ring.adapter.jetty :refer [run-jetty]]))
 
-
-(defn -main []
-  (run-jetty app {:port 3000}))
+(def server (delay (run-jetty app {:port 3000 :join? false})))
+;(defn -main []
+;  (.start @server))
