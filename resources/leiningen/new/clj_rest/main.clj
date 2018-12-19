@@ -1,16 +1,6 @@
 (ns {{name}}.main
-  (:require [{{name}}.handler :refer [app]]
-            [ring.adapter.jetty :refer [run-jetty]]))
+  (:require [{{name}}.system :as system]))
 
-(def server nil)
-
-(defn start-server []
-  (def server (run-jetty #'app {:port 3000 :join? false})))
-(defn stop-server []
-  (.stop server))
-(defn restart-server []
-  (.stop server)
-  (.start server))
 
 (defn -main []
-  (start-server))
+  (.start (system/new-system)))

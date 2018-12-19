@@ -4,7 +4,6 @@
             [ring.middleware.defaults :refer [wrap-defaults site-defaults]]
             [ring.middleware.json :refer [wrap-json-body wrap-json-response]]
             [ring.util.response :refer [response]]
-            [ring.util.anti-forgery :refer [anti-forgery-field]]
             [cheshire.core :as json]))
 
 
@@ -24,5 +23,3 @@
       (wrap-defaults site-defaults-without-anti-forgery)
       (wrap-json-body {:keywords? true :bigdecimals? true})
       (wrap-json-response)))
-
-(def app #'handler)
