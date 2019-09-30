@@ -1,5 +1,7 @@
 # clj-rest
 
+![Clojars Project](https://img.shields.io/clojars/v/clj-rest/lein-template.svg)
+
 clojure rest api app template.
 
 
