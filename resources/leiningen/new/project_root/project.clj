@@ -15,7 +15,7 @@
                            [org.clojure/java.jdbc "0.7.8"]
                            [mysql/mysql-connector-java "8.0.13"]
                            [yesql "0.5.3"]]
-            :plugins [[lein-ring "0.12.4"]]
+            :plugins [[lein-ring "0.12.5"]]
             :ring {:handler {{name}}.handler/app}
             :profiles
             {:dev {:dependencies [[javax.servlet/servlet-api "2.5"]
